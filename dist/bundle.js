@@ -1,6 +1,7 @@
 const app = angular.module('healthApp', ['ui.router']).config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 
 
+<<<<<<< HEAD
     $stateProvider
         .state('home', {
             url: '/home',
@@ -19,14 +20,34 @@ const app = angular.module('healthApp', ['ui.router']).config(["$stateProvider",
 
 
     $urlRouterProvider.otherwise('/login')
+=======
+$stateProvider
+    .state('home', {
+        url: '/home',
+        templateUrl: './app/routes/home/homeTmpl.html'
+    })
+    .state('workouts', {
+        url: '/workouts',
+        templateUrl: './app/routes/workouts/workoutsTmpl.html'
+    })
+    .state('streaks', {
+        url: '/streaks',
+        templateUrl: './app/routes/home/streaksTmpl.html',
+        controller: 'streaksSrvc'
+    })
+
+
+$urlRouterProvider.otherwise('/home')
+>>>>>>> master
 
 
 }])
-app.controller('mainCtrl', ["$scope", function($scope) {
+app.controller('mainCtrl', ["$scope", "streaksSrvc", function($scope, streaksSrvc) {
 
-    $scope.test = "it's twerking!"
-
+    // gtfo bro
+    $scope.streak = streaksSrvc.getStreak();
 }])
+<<<<<<< HEAD
 
 app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
     $scope.getFitLevel = function() {
@@ -49,3 +70,43 @@ app.service('signupSrvc', function() {
         }
     }
 })
+=======
+app.directive('streaksDir', function () {
+	return {
+		template: `<div class='streak'>{{streak}}</div>`,
+		restrict: 'E'
+		// link: function (scope, iElement, iAttrs) {
+			
+		// }
+	};
+})
+
+app.service('streaksSrvc',function () {
+	var streak = 0;
+	this.setStreak = function(count) {
+		streak = count;
+	}
+
+	this.getStreak = function() {
+		return streak;
+	}
+})
+app.directive('swipeCard', function() {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        link: function(scope, element, attrs) {
+
+        },
+        templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
+    }
+})
+app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
+
+	$scope.setStreak = streaksSrvc.setStreak;
+
+	$scope.getStreak = streaksSrvc.getStreak;
+}]);
+>>>>>>> master
