@@ -9,6 +9,7 @@ $stateProvider
     .state('workouts', {
         url: '/workouts',
         templateUrl: './app/routes/workouts/workoutsTmpl.html'
+    })
     .state('streaks', {
         url: '/streaks',
         templateUrl: './app/routes/home/streaksTmpl.html',
@@ -25,19 +26,6 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", function($scope, streaksSrv
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
 }])
-
-app.directive('swipeCard', function() {
-    return {
-        restrict: 'E',
-        scope: {
-
-        },
-        link: function(scope, element, attrs) {
-
-        },
-        templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
-    }
-})
 app.directive('streaksDir', function () {
 	return {
 		template: `<div class='streak'>{{streak}}</div>`,
@@ -57,6 +45,18 @@ app.service('streaksSrvc',function () {
 	this.getStreak = function() {
 		return streak;
 	}
+})
+app.directive('swipeCard', function() {
+    return {
+        restrict: 'E',
+        scope: {
+
+        },
+        link: function(scope, element, attrs) {
+
+        },
+        templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
+    }
 })
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 

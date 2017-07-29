@@ -40,30 +40,30 @@ app.use(session({
 //========================== OAuth2 ================================
 
 
-var OAuth2 = google.auth.OAuth2;
+// var OAuth2 = google.auth.OAuth2;
 
-var oauth2Client = new OAuth2(
-  YOUR_CLIENT_ID,
-  YOUR_CLIENT_SECRET,
-  YOUR_REDIRECT_URL
-);
+// var oauth2Client = new OAuth2(
+//   YOUR_CLIENT_ID,
+//   YOUR_CLIENT_SECRET,
+//   YOUR_REDIRECT_URL
+// );
 
-// generate a url that asks permissions for Google+ and Google Calendar scopes
-var scopes = [
-  'https://www.googleapis.com/auth/plus.me',
-  'https://www.googleapis.com/auth/calendar'
-];
+// // generate a url that asks permissions for Google+ and Google Calendar scopes
+// var scopes = [
+//   'https://www.googleapis.com/auth/plus.me',
+//   'https://www.googleapis.com/auth/calendar'
+// ];
 
-var url = oauth2Client.generateAuthUrl({
-  // 'online' (default) or 'offline' (gets refresh_token)
-  access_type: 'offline',
+// var url = oauth2Client.generateAuthUrl({
+//   // 'online' (default) or 'offline' (gets refresh_token)
+//   access_type: 'offline',
 
-  // If you only need one scope you can pass it as a string
-  scope: scopes,
+//   // If you only need one scope you can pass it as a string
+//   scope: scopes,
 
-  // Optional property that passes state parameters to redirect URI
-  // state: { foo: 'bar' }
-})
+//   // Optional property that passes state parameters to redirect URI
+//   // state: { foo: 'bar' }
+// })
 
 
 //========================== Auth 0 ================================
@@ -103,28 +103,28 @@ app.get('/api/auth0', function(req,res) {
 //========================== Google DPF ================================
 
 
-   let dfpUser = new Dfp.User(NETWORK_CODE, APP_NAME, VERSION)
+  //  let dfpUser = new Dfp.User(NETWORK_CODE, APP_NAME, VERSION)
 
 
-    dfpUser.setSettings({
-        client_id : config.dev.dfpSettings.clientID,
-        client_secret : config.dev.dfpSettings.clientSecret,
-        refresh_token : config.dev.dfpSettings.refreshToken,
-        redirect_url : config.dev.dfpSettings.redirectUrl
-      })
+  //   dfpUser.setSettings({
+  //       client_id : config.dev.dfpSettings.clientID,
+  //       client_secret : config.dev.dfpSettings.clientSecret,
+  //       refresh_token : config.dev.dfpSettings.refreshToken,
+  //       redirect_url : config.dev.dfpSettings.redirectUrl
+  //     })
       
 
-    dfpUser.getService('LineItemService', function (err, lineItemService) {
-      if (err) {
-        return console.error(err);
-      }
+  //   dfpUser.getService('LineItemService', function (err, lineItemService) {
+  //     if (err) {
+  //       return console.error(err);
+  //     }
 
-      var statement = new DfpClass.Statement('WHERE id = 103207340');
+  //     var statement = new DfpClass.Statement('WHERE id = 103207340');
 
-      lineItemService.getLineItemsByStatement(statement, function (err, results) {
-        console.log(results);
-      })
-    })
+  //     lineItemService.getLineItemsByStatement(statement, function (err, results) {
+  //       console.log(results);
+  //     })
+  //   })
 
 
 // import controller module

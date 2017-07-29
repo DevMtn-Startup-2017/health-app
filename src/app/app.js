@@ -9,6 +9,7 @@ $stateProvider
     .state('workouts', {
         url: '/workouts',
         templateUrl: './app/routes/workouts/workoutsTmpl.html'
+    })
     .state('streaks', {
         url: '/streaks',
         templateUrl: './app/routes/home/streaksTmpl.html',
