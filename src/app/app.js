@@ -1,6 +1,5 @@
 const app = angular.module('healthApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 
-
     $stateProvider
         .state('home', {
             url: '/home',
