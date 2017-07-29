@@ -29,7 +29,7 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", function($scope, streaksSrv
 app.directive('backhomeDir', function () {
 
 	return {
-		template: `<div ui-sref='home' class='back-home'><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></div>`,
+		template: `<div ui-sref='home' class='back-home'><i class="fa fa-arrow-left fa-4x" aria-hidden="true"></i></div>`,
 		restrict: 'E'
 		// link: function (scope, iElement, iAttrs) {
 			
@@ -68,6 +68,7 @@ app.directive('swipeCard', function() {
         templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
     }
 })
+
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 
 	$scope.setStreak = streaksSrvc.setStreak;
