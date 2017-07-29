@@ -6,14 +6,45 @@ $stateProvider
         url: '/home',
         templateUrl: './app/routes/home/homeTmpl.html'
     })
+    .state('streaks', {
+        url: '/streaks',
+        templateUrl: './app/routes/home/streaksTmpl.html',
+        controller: 'streaksSrvc'
+    })
 
 
 $urlRouterProvider.otherwise('/home')
 
 
 }])
-app.controller('mainCtrl', ["$scope", function($scope) {
+app.controller('mainCtrl', ["$scope", "streaksSrvc", function($scope, streaksSrvc) {
 
-    $scope.test = "it's twerking!"
-
+    // gtfo bro
+    $scope.streak = streaksSrvc.getStreak();
 }])
+app.directive('streaksDir', function () {
+	return {
+		template: `<div class='streak'>{{streak}}</div>`,
+		restrict: 'E'
+		// link: function (scope, iElement, iAttrs) {
+			
+		// }
+	};
+})
+
+app.service('streaksSrvc',function () {
+	var streak = 0;
+	this.setStreak = function(count) {
+		streak = count;
+	}
+
+	this.getStreak = function() {
+		return streak;
+	}
+})
+app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
+
+	$scope.setStreak = streaksSrvc.setStreak;
+
+	$scope.getStreak = streaksSrvc.getStreak;
+}]);
