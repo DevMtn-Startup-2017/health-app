@@ -68,7 +68,6 @@ app.directive('swipeCard', function() {
         templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
     }
 })
-
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 
 	$scope.setStreak = streaksSrvc.setStreak;
