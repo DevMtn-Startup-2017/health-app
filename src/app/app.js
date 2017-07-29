@@ -12,8 +12,8 @@ $stateProvider
     })
     .state('streaks', {
         url: '/streaks',
-        templateUrl: './app/routes/home/streaksTmpl.html',
-        controller: 'streaksSrvc'
+        templateUrl: './app/routes/streak/streaksTmpl.html',
+        controller: 'streaksCtrl'
     })
 
 
