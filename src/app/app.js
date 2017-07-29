@@ -6,6 +6,10 @@ $stateProvider
         url: '/home',
         templateUrl: './app/routes/home/homeTmpl.html'
     })
+    .state('workouts', {
+        url: '/workouts',
+        templateUrl: './app/routes/workouts/workoutsTmpl.html'
+    })
 
 
 $urlRouterProvider.otherwise('/home')

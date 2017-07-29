@@ -46,3 +46,13 @@ table {
 
 button:focus {
   outline: none; }
+
+#swipe-section {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(black, #111111);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
