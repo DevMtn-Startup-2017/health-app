@@ -17,7 +17,7 @@ let changeEvent = function(evt) {
 let paths = {
   jsSource: ['./src/app/**/*.js', '!/src/bundle.js'],
   cssSource: ['./src/app/**/*.css'],
-  sassSource: ['./src/app/**/*.sass'],
+  sassSource: ['./src/app/**/*.scss'],
   indexSource: ['./src/index.html'],
   htmlSource: ['./src/app/**/*.html'],
   mediaSource: ['./src/app/**/*.svg', './src/app/**/*.png', './src/app/**/*.wav', './src/app/**/*.jpg'],
