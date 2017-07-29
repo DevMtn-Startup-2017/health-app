@@ -1,7 +1,6 @@
 const app = angular.module('healthApp', ['ui.router']).config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 
 
-<<<<<<< HEAD
     $stateProvider
         .state('home', {
             url: '/home',
@@ -17,28 +16,19 @@ const app = angular.module('healthApp', ['ui.router']).config(["$stateProvider",
             templateUrl: './app/routes/login/loginTmpl.html',
             controller: 'signupCtrl'
         })
+        .state('workouts', {
+            url: '/workouts',
+            templateUrl: './app/routes/workouts/workoutsTmpl.html'
+        })
+        .state('streaks', {
+            url: '/streaks',
+            templateUrl: './app/routes/home/streaksTmpl.html',
+            controller: 'streaksSrvc'
+        })
+
 
 
     $urlRouterProvider.otherwise('/login')
-=======
-$stateProvider
-    .state('home', {
-        url: '/home',
-        templateUrl: './app/routes/home/homeTmpl.html'
-    })
-    .state('workouts', {
-        url: '/workouts',
-        templateUrl: './app/routes/workouts/workoutsTmpl.html'
-    })
-    .state('streaks', {
-        url: '/streaks',
-        templateUrl: './app/routes/home/streaksTmpl.html',
-        controller: 'streaksSrvc'
-    })
-
-
-$urlRouterProvider.otherwise('/home')
->>>>>>> master
 
 
 }])
@@ -47,30 +37,6 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", function($scope, streaksSrv
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
 }])
-<<<<<<< HEAD
-
-app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
-    $scope.getFitLevel = function() {
-        $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value);
-    }
-
-}])
-app.service('signupSrvc', function() {
-    this.getFitnessLevel = function(val) {
-        if (val === 1) {
-            return "Fitness Beginner"
-        } else if (val === 2) {
-            return "Fitness Novice"
-        } else if (val === 3) {
-            return "Fitness Intermediate"
-        } else if (val == 4) {
-            return "Fitness Pro"
-        } else {
-            return "Fitness Master"
-        }
-    }
-})
-=======
 app.directive('streaksDir', function () {
 	return {
 		template: `<div class='streak'>{{streak}}</div>`,
@@ -103,10 +69,30 @@ app.directive('swipeCard', function() {
         templateUrl: './app/directives/swipeCardDir/swipeCardDirTmpl.html'
     }
 })
+app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
+    $scope.getFitLevel = function() {
+        $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value);
+    }
+
+}])
+app.service('signupSrvc', function() {
+    this.getFitnessLevel = function(val) {
+        if (val === 1) {
+            return "Fitness Beginner"
+        } else if (val === 2) {
+            return "Fitness Novice"
+        } else if (val === 3) {
+            return "Fitness Intermediate"
+        } else if (val == 4) {
+            return "Fitness Pro"
+        } else {
+            return "Fitness Master"
+        }
+    }
+})
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 
 	$scope.setStreak = streaksSrvc.setStreak;
 
 	$scope.getStreak = streaksSrvc.getStreak;
 }]);
->>>>>>> master
