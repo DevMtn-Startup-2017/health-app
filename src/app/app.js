@@ -6,6 +6,11 @@ $stateProvider
         url: '/home',
         templateUrl: './app/routes/home/homeTmpl.html'
     })
+    .state('streaks', {
+        url: '/streaks',
+        templateUrl: './app/routes/home/streaksTmpl.html',
+        controller: 'streaksSrvc'
+    })
 
 
 $urlRouterProvider.otherwise('/home')

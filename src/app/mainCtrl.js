@@ -1,5 +1,5 @@
-app.controller('mainCtrl', function($scope) {
+app.controller('mainCtrl', function($scope, streaksSrvc) {
 
-    $scope.test = "it's twerking!"
-
+    // gtfo bro
+    $scope.streak = streaksSrvc.getStreak();
 })
