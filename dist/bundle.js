@@ -41,7 +41,14 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scop
     $scope.card.getWorkout();
 
     $scope.changeTime = function(val) {
-        $scope.card.workout.base_intensity = swipeSrvc.changeTime($scope.card.workout.base_intensity, val)
+        if (val < 0 && $scope.card.workout.base_intensity > 0) {
+            $scope.card.workout.base_intensity = swipeSrvc.changeTime($scope.card.workout.base_intensity, val)
+        }
+
+        if (val > 0) {
+            $scope.card.workout.base_intensity = swipeSrvc.changeTime($scope.card.workout.base_intensity, val)
+        }
+
     }
 }])
 app.directive('backhomeDir', function () {
