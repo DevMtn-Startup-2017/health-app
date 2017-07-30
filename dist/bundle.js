@@ -200,4 +200,6 @@ app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streak
 
 	$scope.setStreak = streaksSrvc.setStreak;
 	$scope.streak = streaksSrvc.getStreak();
+
+	
 }]);
