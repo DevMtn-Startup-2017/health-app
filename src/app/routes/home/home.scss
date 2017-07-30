@@ -13,16 +13,19 @@
     }
     .streak {
         border-radius: 50%;
-        border: 2px solid white;
+        border: .3vw solid white;
         color: white;
-        font-size: 2em;
-        width: 50px;
-        line-height: 50px;
-        height: 50px;
+        font-size: 3em;
+        width: 5vw;
+        line-height: 5vw;
+        height: 5vw;
         text-align: center;
         position: absolute;
         bottom: 4vh;
         right: 3vw;
+        &:hover {
+            cursor: pointer;
+        }
     }
     #swipe-card-directive {
         .card {

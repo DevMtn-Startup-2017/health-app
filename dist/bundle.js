@@ -21,11 +21,9 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial']
             })
             .state('streaks', {
                 url: '/streaks',
-                templateUrl: './app/routes/home/streaksTmpl.html',
-                controller: 'streaksSrvc'
+                templateUrl: './app/routes/streak/streaksTmpl.html',
+                controller: 'streaksCtrl'
             })
-
-
 
         $urlRouterProvider.otherwise('/login')
 
@@ -41,9 +39,19 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scop
     }
     $scope.card.getWorkout();
 }])
+app.directive('backhomeDir', function () {
+
+	return {
+		template: `<div ui-sref='home' class='back-home'><i class="fa fa-arrow-left fa-4x" aria-hidden="true"></i></div>`,
+		restrict: 'E'
+		// link: function (scope, iElement, iAttrs) {
+			
+		// }
+	};
+})
 app.directive('streaksDir', function () {
 	return {
-		template: `<div class='streak'>{{streak}}</div>`,
+		template: `<div ui-sref='streaks' class='streak'>{{streak}}</div>`,
 		restrict: 'E'
 		// link: function (scope, iElement, iAttrs) {
 			
@@ -114,6 +122,5 @@ app.service('signupSrvc', function() {
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 
 	$scope.setStreak = streaksSrvc.setStreak;
-
-	$scope.getStreak = streaksSrvc.getStreak;
+	$scope.streak = streaksSrvc.getStreak();
 }]);

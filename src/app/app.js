@@ -21,11 +21,9 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial']
             })
             .state('streaks', {
                 url: '/streaks',
-                templateUrl: './app/routes/home/streaksTmpl.html',
-                controller: 'streaksSrvc'
+                templateUrl: './app/routes/streak/streaksTmpl.html',
+                controller: 'streaksCtrl'
             })
-
-
 
         $urlRouterProvider.otherwise('/login')
 
