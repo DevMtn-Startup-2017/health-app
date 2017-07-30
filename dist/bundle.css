@@ -291,7 +291,11 @@ button:focus {
   height: 100vh;
   background: linear-gradient(to top right, #ff9323, #aa1323);
   color: rgba(255, 255, 255, 0.7);
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
   @media only screen and (max-width: 650px) {
     #swipe-section .back-home {
       float: left;
@@ -309,10 +313,16 @@ button:focus {
       border-radius: 50%;
       color: white;
       box-shadow: 4px 4px rgba(0, 0, 0, 0.3); }
+    #swipe-section .go-button {
+      margin: 50px 0;
+      width: 50vw;
+      height: 80px;
+      font-size: 24px; }
     #swipe-section #ready {
-      font-size: 4em;
+      font-size: 32px;
       text-align: center;
-      border-bottom: 2px solid grey; }
+      padding: 5px;
+      padding-top: 20px; }
     #swipe-section #exercise {
       font-size: 3em;
       margin-top: 20%; }
@@ -323,4 +333,7 @@ button:focus {
       margin-left: 10%;
       margin-right: 10%; }
     #swipe-section #description {
-      margin-top: 10%; } }
+      margin-top: 10%;
+      padding: 0 20px; }
+    #swipe-section #slider-container {
+      padding-bottom: 50px; } }
