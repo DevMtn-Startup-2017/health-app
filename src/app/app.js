@@ -1,5 +1,18 @@
 const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('green')
+            .accentPalette('orange')
+
+        $mdThemingProvider.enableBrowserColor({
+            theme: 'default', // Default is 'default'
+            palette: 'accent', // Default is 'primary', any basic material palette and extended palettes are available
+            hue: '200' // Default is '800'
+            })
+
+
         $stateProvider
             .state('home', {
                 url: '/home',

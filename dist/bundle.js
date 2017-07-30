@@ -1,5 +1,18 @@
 const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
-    .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+    .config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider", function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('green')
+            .accentPalette('orange')
+
+        $mdThemingProvider.enableBrowserColor({
+            theme: 'default', // Default is 'default'
+            palette: 'accent', // Default is 'primary', any basic material palette and extended palettes are available
+            hue: '200' // Default is '800'
+            })
+
+
         $stateProvider
             .state('home', {
                 url: '/home',
@@ -30,8 +43,8 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial',
 
 
     }])
-app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scope, streaksSrvc, swipeSrvc) {
-    $scope.card = [];
+app.controller('mainCtrl', ["$scope", "$mdTheming", "streaksSrvc", "swipeSrvc", function($scope, $mdTheming, streaksSrvc, swipeSrvc) {
+    $scope.card = []
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
     $scope.card.changeView = swipeSrvc.changeView;
@@ -50,6 +63,17 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scop
         }
 
     }
+
+
+    var removeFunction = $mdTheming.setBrowserColor({
+      theme: 'default', 
+      palette: 'accent', 
+      hue: '200' 
+    })
+
+    $scope.$on('$destroy', function () {
+      removeFunction() 
+    })
 }])
 app.directive('backhomeDir', function () {
 
@@ -173,25 +197,50 @@ app.service("swipeSrvc", ["$window", function($window) {
     }
 }])
 app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
+
+    $scope.value = 3
+    $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value)
+
     $scope.getFitLevel = function() {
         $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value);
+        console.log($scope.fitLevel)
     }
+
+    $scope.heightValues = signupSrvc.heightValues()
+
+    $scope.weightValues = signupSrvc.weightValues()
 
 }])
 app.service('signupSrvc', function() {
     this.getFitnessLevel = function(val) {
-        if (val === 1) {
-            return "Fitness Beginner"
-        } else if (val === 2) {
-            return "Fitness Novice"
-        } else if (val === 3) {
-            return "Fitness Intermediate"
-        } else if (val == 4) {
-            return "Fitness Pro"
-        } else {
-            return "Fitness Master"
+
+        var levels = {
+            1: "Beginner",
+            2: "Novice",
+            3: "Intermediate",
+            4: "Pro",
+            5: "Master",
         }
+        return levels[val] || levels[3]
+
     }
+
+    this.weightValues = function() {
+        let vals = []
+        for (var i = 100; i < 500; i+= 5) {
+            vals.push(i)
+        }
+        return vals
+    }
+
+    this.heightValues = function() {
+        let vals = []
+        for (var i = 52; i < (12*8); i+= 1) {
+            vals.push(i)
+        }
+        return vals
+    }
+
 })
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 

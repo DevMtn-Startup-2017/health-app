@@ -1,0 +1,24 @@
+// ui-view {
+//     transition: 5s;
+
+//   &.ng-enter {
+//     transform: translateX(-600px);
+//     opacity: 0;
+// }
+//   &.ng-enter-active {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   &.ng-leave {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   &.ng-leave-active {
+//     transform: translateX(-600px);
+//     opacity: 0;
+//   }
+// }
+
+body {
+    font-family: sans-serif;
+}

@@ -1,16 +1,49 @@
 <section id='signUp'>
-    <h1>Sign Up</h1>
+
     <div class='center'>
-        <form>
-            <ul>
-                <li><input ng-model="fName" type="text" placeholder="First Name"></li>
-                <li><input ng-model="lName" type="text" placeholder="Last Name"></li>
-                <li><input ng-model="height" type="text" placeholder="Height"></li>
-                <li><input ng-model="weight" type="text" placeholder="Weight"></li>
-                <li><label for="FL">Fitness Level:</label></li>
-                <li><input ng-model="value" ng-change="getFitLevel()" type="range" name="FL" id="FL" value="1" min="1" max="5" data-show-value="false"></li>{{fitLevel}}
-                <li><button type="button" ui-sref="home">Submit</button><button type="button" ui-sref="home">Fill this out Later</button></li>
-            </ul>
-        </form>
+        
+        <h1 md-colors="{color: 'primary-900'}">Help us tailor your workout experience to you</h1>
+
+        <md-content md-theme="default" layout-gt-m="row" layout-padding>
+            <div>
+
+                <md-input-container class="md-block" flex-gt-m>
+                    <label>Height (in)</label>
+                    <md-select ng-model="user.height">
+                    <md-option ng-repeat="height in heightValues" value="{{user.height || height}}">
+                        {{height}}
+                    </md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-m>
+                    <label>Weight (lbs)</label>
+                    <md-select ng-model="user.weight">
+                    <md-option ng-repeat="weight in weightValues" value="{{user.weight || weight}}">
+                        {{weight}}
+                    </md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-slider-container>
+                    <md-slider flex ng-model="value" ng-change="getFitLevel()" min="1" max="5" aria-label="blue" id="blue-slider" class="md-primary">
+                    </md-slider>
+                </md-slider-container>
+
+                <p class='fit-level'>{{fitLevel}}</p>
+
+            </div>
+
+
+
+        </md-content>
+
+        <div class='buttons-container'>
+
+            <md-button ui-sref="home" class='md-raised md-primary' type="button">Submit</md-button>     
+            <md-button ui-sref="home" class='md-raised md-primary' type="button">Skip</md-button>   
+
+        </div>
+
     </div>
 </section>

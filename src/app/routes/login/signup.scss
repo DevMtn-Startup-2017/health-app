@@ -1,0 +1,56 @@
+#signUp {
+    // background: linear-gradient(to top right, #252f3c, #4b779a);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+
+    h1 {
+        padding: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        color: black;
+        font-size: 28px;
+    }
+    .center {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 80vw;
+    }
+    form {
+        text-align: center;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        list-style: none;
+    }
+    input {
+        text-align: center;
+    }
+    #facebook,
+    #google {
+        width: 15%;
+        height: 10%;
+    }
+    md-content {
+        flex-basis: 10;
+    }
+    .fit-level {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .buttons-container {
+        margin-top: 50px;
+    }
+}

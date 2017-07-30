@@ -1,20 +1,12 @@
 <section id="login">
-    <h1>Login</h1>
-    <form id="loginForm">
-        <ul>
-            <li><input type="text" placeholder="e-mail"></li>
-            <li><input type="text" placeholder="password"></li>
-            <li><button type="button" ui-sref="home">Log In</button></li>
-            <li><img ui-sref="home" id="facebook" src="./app/routes/login/images/loginfacebook.png"></li>
-            <li><img ui-sref="home" id="google" src="./app/routes/login/images/logingoogle.png"></li>
-        </ul>
-    </form>
-    <h1>Sign Up</h1>
-    <form>
-        <ul>
-            <li><input type=" text " placeholder="e-mail "></li>
-            <li><input type="text " placeholder="password "></li>
-            <li><button type="button " ui-sref="signup ">Sign Up</button></li>
-        </ul>
-    </form>
+
+    <p class='logo'>Spot Me!</p>
+    <p class='catch-phrase'> Start working out now</p>
+
+    <div class='login-container'>
+        <md-button href="/api/login" class='md-raised md-primary' type="button">Log In</md-button>     
+        <md-button href="/api/signup" class='md-raised md-primary' type="button">Sign Up</md-button>   
+    </div>
+
+
 </section>
