@@ -1,9 +1,6 @@
 app.directive('swipeCard', function() {
     return {
         restrict: 'E',
-        scope: {
-
-        },
         link: function(scope, element, attrs) {
 
         },
