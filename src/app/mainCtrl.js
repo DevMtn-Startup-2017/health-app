@@ -35,7 +35,7 @@ app.controller('mainCtrl', function($scope, $mdTheming, $interval, streaksSrvc, 
 
     $scope.countDownTimer = function(initialCount) {
 
-        console.log('timer started')
+        console.log('timer started', initialCount)
 
         var countDownDate = new Date().getTime() 
 
@@ -64,7 +64,7 @@ app.controller('mainCtrl', function($scope, $mdTheming, $interval, streaksSrvc, 
             if (distance < 0) {
                 cancel(x);
             }
-            }, 1000)
+            }, 333)
 
     }
 })

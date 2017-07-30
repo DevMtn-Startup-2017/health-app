@@ -9,12 +9,22 @@
     align-items: center;
     flex-direction: column;
 
+
+
     @media only screen and (max-width: 650px) {
         .back-home {
             float: left;
             position: absolute;
             margin-left: 3vw;
             margin-top: 3vh;
+        }
+
+        
+
+        #back-dir {
+            width: 100vw;
+            height: 50px;
+            padding: 5px 10px;
         }
 
         #goButton {

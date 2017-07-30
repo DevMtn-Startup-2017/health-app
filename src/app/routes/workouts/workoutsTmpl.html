@@ -1,16 +1,21 @@
 <section id='swipe-section'>
+
+    <div id='back-dir'>
+        <backhome-dir></backhome-dir>
+    </div>
+
     <h1 id="ready">Ready?</h1>
     <h1 id="exercise">{{card.workout.exercise}}</h1>
 
-
-
     <p id="description">{{card.workout.description}}</p>
 
-    <md-button class='md-raised md-primary go-button' type="button">Start!</md-button>     
+    <md-button ng-click="countDownTimer(card.workout.baseIntensity)" class='md-raised md-primary go-button' type="button">Start!</md-button>     
+     <!--<div id='timer'>{{currentTime}}</div>   -->
     <div id='slider-container'>
         <h2 id="intensity">Intensity: {{card.workout.intensity()}}</h2>
         <md-slider id="int_slider" ng-model="card.workout.baseIntensity" min="5" max="60">
         </md-slider>
     </div>
+
 
 </section>
