@@ -1,4 +1,4 @@
-#signUp {
+#login {
     background: linear-gradient(to top right, #252f3c, #4b779a);
     width: 100vw;
     height: 100vh;
@@ -28,5 +28,10 @@
     }
     input {
         text-align: center;
+    }
+    #facebook,
+    #google {
+        width: 15%;
+        height: 10%;
     }
 }

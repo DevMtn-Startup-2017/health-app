@@ -75,7 +75,7 @@ app.get('/api/signup', passport.authenticate('auth0'), function(req,res) {
 
 app.get('/auth/callback',
 passport.authenticate('auth0', {
-  successRedirect: '/#!/home',
+  successRedirect: '/#!/workouts',
   failureRedirect: '/login'
 }))
 

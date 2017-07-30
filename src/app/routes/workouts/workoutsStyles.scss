@@ -2,13 +2,35 @@
     width: 100vw;
     height: 100vh;
     background: radial-gradient(black, #111111);
-    color: rgba(255,255,255,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-
-
-
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    @media only screen and (max-width: 650px) {
+        #goButton {
+            margin-top: 10%;
+            margin-bottom: 5%;
+            text-align: center;
+            font-size: 4em;
+            border-radius: 50%;
+        }
+        #ready {
+            font-size: 4em;
+            text-align: center;
+            border-bottom: 2px solid grey;
+        }
+        #exercise {
+            font-size: 3em;
+            margin-top: 20%;
+        }
+        #intensity {
+            margin-top: 5%;
+            font-size: 2em;
+        }
+        #int_slider {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        #description {
+            margin-top: 10%;
+        }
+    }
 }
