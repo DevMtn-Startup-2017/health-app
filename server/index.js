@@ -77,13 +77,17 @@ passport.use(new Auth0Strategy(config.dev.auth0Strategy, function(accessToken, r
 }))
 
 // login endpoint
-app.get('/login', passport.authenticate('auth0'), function(req,res) {
+app.get('/api/login', passport.authenticate('auth0'), function(req,res) {
+  res.redirect('/#!/workouts')
+})
+
+app.get('/api/signup', passport.authenticate('auth0'), function(req,res) {
   res.redirect('/#!/workouts')
 })
 
 app.get('/auth/callback',
 passport.authenticate('auth0', {
-  successRedirect: '/#!/space',
+  successRedirect: '/#!/signup',
   failureRedirect: '/login'
 }))
 
