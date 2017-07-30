@@ -5,7 +5,7 @@ const request = require('request')
 const session = require('express-session')
 const massive = require('massive')
 const passport = require('passport')
-var google = require('googleapis')
+const google = require('googleapis')
 const oAuth = require('passport-oauth')
 const Auth0Strategy = require('passport-auth0')
 const config = require('./config')
@@ -83,7 +83,7 @@ app.get('/login', passport.authenticate('auth0'), function(req,res) {
 
 app.get('/auth/callback',
 passport.authenticate('auth0', {
-  successRedirect: '/#!/space',
+  successRedirect: '/#!/home',
   failureRedirect: '/login'
 }))
 

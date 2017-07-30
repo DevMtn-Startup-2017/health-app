@@ -1,20 +1,28 @@
 <section id="login">
-    <h1>Login</h1>
-    <form id="loginForm">
-        <ul>
-            <li><input type="text" placeholder="e-mail"></li>
-            <li><input type="text" placeholder="password"></li>
-            <li><button type="button" ui-sref="home">Log In</button></li>
-            <li><img ui-sref="home" id="facebook" src="./app/routes/login/images/loginfacebook.png"></li>
-            <li><img ui-sref="home" id="google" src="./app/routes/login/images/logingoogle.png"></li>
-        </ul>
-    </form>
-    <h1>Sign Up</h1>
-    <form>
-        <ul>
-            <li><input type=" text " placeholder="e-mail "></li>
-            <li><input type="text " placeholder="password "></li>
-            <li><button type="button " ui-sref="signup ">Sign Up</button></li>
-        </ul>
-    </form>
+
+    </p class='logo'>
+        Spot Me
+    </p>
+
+    <div class='login-container'>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <ul>
+                <li><input type="text" placeholder="e-mail"></li>
+                <li><input type="text" placeholder="password"></li>
+                <li><md-button class='md-raised' type="button" ui-sref="home">Log In</md-button></li>
+                <!--<a href="/login"><img  id="facebook" src="./app/routes/login/images/loginfacebook.png" /></a>-->
+            </ul> 
+        </form>
+    </div>
+
+    <div class='sign-up-container'>
+        <h1>Sign Up</h1>
+        <form>
+            <ul>
+                <a href="/login"><img  id="google" src="./app/routes/login/images/logingoogle.png" /></a>
+            </ul>
+        </form>
+    </div>
+
 </section>
