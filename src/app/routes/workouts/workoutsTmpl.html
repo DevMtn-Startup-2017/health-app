@@ -1,11 +1,8 @@
 <section id='swipe-section'>
-
-    <div class='menu-container'>
-        test 123
-    </div>
-
-    <div>
-        test 456
-    </div>
+    <h1>{{card.workout.exercise}}</h1>
+    <button id="goButton">Go</button>
+    <h2>Intensity: {{card.workout.intensity()}}</h2>
+    <button type="button" ng-click="changeTime(5)">+</button><button ng-click="changeTime(-5)" type="button">-</button>
+    <p>{{card.workout.description}}</p>
 
 </section>
