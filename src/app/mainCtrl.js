@@ -1,5 +1,5 @@
-app.controller('mainCtrl', function($scope, streaksSrvc, swipeSrvc) {
-    $scope.card = [];
+app.controller('mainCtrl', function($scope, $mdTheming, streaksSrvc, swipeSrvc) {
+    $scope.card = []
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
     $scope.card.changeView = swipeSrvc.changeView;
@@ -18,4 +18,15 @@ app.controller('mainCtrl', function($scope, streaksSrvc, swipeSrvc) {
         }
 
     }
+
+
+    var removeFunction = $mdTheming.setBrowserColor({
+      theme: 'default', 
+      palette: 'accent', 
+      hue: '200' 
+    })
+
+    $scope.$on('$destroy', function () {
+      removeFunction() 
+    })
 })

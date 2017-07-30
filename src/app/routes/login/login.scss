@@ -1,5 +1,5 @@
 #login {
-    background: linear-gradient(to top right, #f2eada, #f0ffed);
+    background: rgba(245,245,245,0.5);
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -12,19 +12,22 @@
 
     .logo {
         width: 100vw;
-        height: 50vh;
-        flex-basis: 2;
-        font-size: 64px;
+        // height: 50vh;
+        font-size: 84px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0 0 25px rgba(125,125,125,0.5);
     }
 
-    input {
-        padding: 5px;
-        margin: 10px 0; 
-        background: none;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.7);
-    }
+    // input {
+    //     padding: 5px;
+    //     margin: 10px 0; 
+    //     background: none;
+    //     border: none;
+    //     border-radius: 10px;
+    //     box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    // }
 
     button {
         padding: 10px;

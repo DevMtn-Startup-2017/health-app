@@ -1,28 +1,13 @@
 <section id="login">
 
-    </p class='logo'>
+    <p class='logo' md-colors="{color: 'accent'}">
         Spot Me
     </p>
 
     <div class='login-container'>
-        <h1>Login</h1>
-        <form id="loginForm">
-            <ul>
-                <li><input type="text" placeholder="e-mail"></li>
-                <li><input type="text" placeholder="password"></li>
-                <li><md-button class='md-raised' type="button" ui-sref="home">Log In</md-button></li>
-                <!--<a href="/login"><img  id="facebook" src="./app/routes/login/images/loginfacebook.png" /></a>-->
-            </ul> 
-        </form>
+        <md-button href="/api/login" class='md-raised md-primary' type="button">Log In</md-button>     
+        <md-button href="/api/signup" class='md-raised md-primary' type="button">Sign Up</md-button>   
     </div>
 
-    <div class='sign-up-container'>
-        <h1>Sign Up</h1>
-        <form>
-            <ul>
-                <a href="/login"><img  id="google" src="./app/routes/login/images/logingoogle.png" /></a>
-            </ul>
-        </form>
-    </div>
 
 </section>

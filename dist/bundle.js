@@ -1,5 +1,18 @@
 const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial'])
-    .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+    .config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider", function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('green')
+            .accentPalette('deep-orange')
+
+        $mdThemingProvider.enableBrowserColor({
+            theme: 'default', // Default is 'default'
+            palette: 'accent', // Default is 'primary', any basic material palette and extended palettes are available
+            hue: '200' // Default is '800'
+            })
+
+
         $stateProvider
             .state('home', {
                 url: '/home',
@@ -30,8 +43,8 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial']
 
 
     }])
-app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scope, streaksSrvc, swipeSrvc) {
-    $scope.card = [];
+app.controller('mainCtrl', ["$scope", "$mdTheming", "streaksSrvc", "swipeSrvc", function($scope, $mdTheming, streaksSrvc, swipeSrvc) {
+    $scope.card = []
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
     $scope.card.changeView = swipeSrvc.changeView;
@@ -50,6 +63,17 @@ app.controller('mainCtrl', ["$scope", "streaksSrvc", "swipeSrvc", function($scop
         }
 
     }
+
+
+    var removeFunction = $mdTheming.setBrowserColor({
+      theme: 'default', 
+      palette: 'accent', 
+      hue: '200' 
+    })
+
+    $scope.$on('$destroy', function () {
+      removeFunction() 
+    })
 }])
 app.directive('backhomeDir', function () {
 
