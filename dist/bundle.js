@@ -98,11 +98,6 @@ app.service("swipeSrvc", ["$window", function($window) {
         return workouts[0];
     }
 }])
-app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
-
-	$scope.setStreak = streaksSrvc.setStreak;
-	$scope.streak = streaksSrvc.getStreak();
-}]);
 app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
     $scope.getFitLevel = function() {
         $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value);
@@ -124,3 +119,8 @@ app.service('signupSrvc', function() {
         }
     }
 })
+app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
+
+	$scope.setStreak = streaksSrvc.setStreak;
+	$scope.streak = streaksSrvc.getStreak();
+}]);
