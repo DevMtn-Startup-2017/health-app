@@ -1,8 +1,10 @@
 <section id='swipe-section'>
-    <h1>{{card.workout.exercise}}</h1>
+    <h1 id="ready">Ready?</h1>
+    <h1 id="exercise">{{card.workout.exercise}}</h1>
     <button id="goButton">Go</button>
-    <h2>Intensity: {{card.workout.intensity()}}</h2>
-    <button type="button" ng-click="changeTime(5)">+</button><button ng-click="changeTime(-5)" type="button">-</button>
-    <p>{{card.workout.description}}</p>
+    <h2 id="intensity">Intensity: {{card.workout.intensity()}}</h2>
+    <md-slider id="int_slider" ng-model="card.workout.base_intensity" min="5" max="60">
+    </md-slider>
+    <p id="description">{{card.workout.description}}</p>
 
 </section>

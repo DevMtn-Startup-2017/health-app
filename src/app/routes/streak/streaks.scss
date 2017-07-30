@@ -16,19 +16,40 @@
 		}
 	}
 
+	img {
+		width: 50vw;
+		height: auto;
+		float: left;
+		margin-left: 8vw;
+		display: inline-element;
+	}
+
+
+	.streaks-label {
+		color: white;
+		font-size: 4em;
+		display: inline-block;
+		float: right;
+		margin-right: 6vw;
+		margin-top: 12vh;
+	}
+
 	#streak-count {
 		border-radius: 50%;
-		border: 2px solid white;
+		border: 5px solid white;
 		color: white;
-		width: 80vh;
-		line-height: 80vh;
+		position: absolute;
+		margin-left: 10vw;
+		margin-top: 30vh;
+		width: 40vh;
+		line-height: 40vh;
 		height: auto;
 		text-align: center;
-		margin: auto;
-
+		display: inline-block;
+		
 
 		h1 {
-			font-size: 15em;
+			font-size: 10em;
 		}
 	}	
 }

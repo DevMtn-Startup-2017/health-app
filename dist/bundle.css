@@ -159,24 +159,59 @@ button:focus {
     width: auto; }
     #streak .back-home:hover {
       cursor: pointer; }
+  #streak img {
+    width: 50vw;
+    height: auto;
+    float: left;
+    margin-left: 8vw;
+    display: inline-element; }
+  #streak .streaks-label {
+    color: white;
+    font-size: 4em;
+    display: inline-block;
+    float: right;
+    margin-right: 6vw;
+    margin-top: 12vh; }
   #streak #streak-count {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 5px solid white;
     color: white;
-    width: 80vh;
-    line-height: 80vh;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 30vh;
+    width: 40vh;
+    line-height: 40vh;
     height: auto;
     text-align: center;
-    margin: auto; }
+    display: inline-block; }
     #streak #streak-count h1 {
-      font-size: 15em; }
+      font-size: 10em; }
 
 #swipe-section {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(black, #111111);
   color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  text-align: center; }
+  @media only screen and (max-width: 650px) {
+    #swipe-section #goButton {
+      margin-top: 10%;
+      margin-bottom: 5%;
+      text-align: center;
+      font-size: 4em;
+      border-radius: 50%; }
+    #swipe-section #ready {
+      font-size: 4em;
+      text-align: center;
+      border-bottom: 2px solid grey; }
+    #swipe-section #exercise {
+      font-size: 3em;
+      margin-top: 20%; }
+    #swipe-section #intensity {
+      margin-top: 5%;
+      font-size: 2em; }
+    #swipe-section #int_slider {
+      margin-left: 10%;
+      margin-right: 10%; }
+    #swipe-section #description {
+      margin-top: 10%; } }

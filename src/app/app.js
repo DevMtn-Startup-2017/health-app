@@ -1,4 +1,4 @@
-const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial'])
+const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
