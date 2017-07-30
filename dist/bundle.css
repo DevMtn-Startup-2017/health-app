@@ -1,6 +1,6 @@
 
 #login {
-  background: linear-gradient(to top right, #252f3c, #264350);
+  background: linear-gradient(to top right, #252f3c, #4b779a);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -78,7 +78,7 @@ button:focus {
   outline: none; }
 
 #signUp {
-  background: linear-gradient(to top right, #252f3c, #264350);
+  background: linear-gradient(to top right, #252f3c, #4b779a);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -105,7 +105,7 @@ button:focus {
 
 #home-bg {
   background-color: #252f3c;
-  background: linear-gradient(to top right, #252f3c, #264350);
+  background: linear-gradient(to top right, #252f3c, #4b779a);
   height: 100vh;
   width: 100vw; }
   #home-bg .hamburger {
@@ -118,7 +118,7 @@ button:focus {
     border-radius: 50%;
     border: .3vw solid white;
     color: white;
-    font-size: 3em;
+    font-size: 4vw;
     width: 5vw;
     line-height: 5vw;
     height: 5vw;
@@ -142,13 +142,27 @@ button:focus {
   #home-bg #swipe-card-directive h2 {
     text-align: center;
     font-size: 2em; }
+  #home-bg #swipe-card-directive .card {
+    font-size: 1vw;
+    padding: 2vh 5vw;
+    margin-top: 10vh;
+    padding-top: 12vh;
+    height: 50vh;
+    width: auto;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(15, 87, 240, 0.19);
+    border: 1px solid #2d3f52 white;
+    box-shadow: 5px 8px rgba(46, 63, 82, 0.5); }
   @media only screen and (max-width: 700px) {
     #home-bg #swipe-card-directive .card {
+      margin-top: 18vh;
+      font-size: 1vh;
       width: 80%;
-      height: 80%; } }
+      height: 50vh; } }
 
 #streak {
-  background: linear-gradient(to top right, #252f3c, #264350);
+  background: linear-gradient(to top right, #252f3c, #4b779a);
   height: 100vh;
   width: 100vw;
   padding-top: 10vh; }
@@ -186,6 +200,50 @@ button:focus {
     display: inline-block; }
     #streak #streak-count h1 {
       font-size: 10em; }
+  @media only screen and (max-width: 700px) {
+    #streak .back-home {
+      position: absolute;
+      left: 3vw;
+      top: 2vh;
+      width: auto; }
+    #streak #adpic {
+      height: 12vh;
+      padding-top: 5vh;
+      transform: translateY(-15%);
+      border: 2px solid white;
+      text-align: center; }
+      #streak #adpic p {
+        color: white;
+        padding-top: 0vh; }
+    #streak .streaks-label {
+      color: white;
+      font-size: 10vw;
+      display: inline-block;
+      float: left;
+      margin-top: 2vh;
+      margin-left: 3vw; }
+    #streak #streak-count {
+      border-radius: 50%;
+      border: 3px solid white;
+      color: white;
+      position: absolute;
+      right: 8vw;
+      margin-left: 65vw;
+      margin-top: 0vh;
+      width: 15vw;
+      line-height: 15vw;
+      height: auto;
+      text-align: center;
+      display: inline-block; }
+      #streak #streak-count h1 {
+        font-size: 14vw; }
+    #streak img {
+      width: 90vw;
+      height: auto;
+      float: left;
+      margin-left: 5vw;
+      margin-top: 4vh;
+      display: inline-element; } }
 
 #swipe-section {
   width: 100vw;

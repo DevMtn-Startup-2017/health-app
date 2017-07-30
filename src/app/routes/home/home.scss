@@ -1,6 +1,6 @@
 #home-bg {
     background-color: #252f3c;
-    background: linear-gradient(to top right, #252f3c, #264350);
+    background: linear-gradient(to top right, #252f3c, #4b779a);
     height: 100vh;
     width: 100vw;
     .hamburger {
@@ -15,7 +15,7 @@
         border-radius: 50%;
         border: .3vw solid white;
         color: white;
-        font-size: 3em;
+        font-size: 4vw;
         width: 5vw;
         line-height: 5vw;
         height: 5vw;
@@ -45,11 +45,28 @@
             text-align: center;
             font-size: 2em;
         }
+        .card {
+            font-size:1vw;
+            padding: 2vh 5vw;
+            margin-top: 10vh;
+            padding-top: 12vh;
+            height: 50vh;
+            width: auto;
+            border-radius: 15px;
+            color: white;
+            background-color: rgba(15, 87, 240, .19);
+            border: 1px solid #2d3f52 white;//
+            box-shadow: 5px 8px rgba(46, 63, 82, .5);
+        }
+
         @media only screen and (max-width: 700px) {
             .card {
+                margin-top: 18vh;
+                font-size: 1vh;
                 width: 80%;
-                height: 80%;
+                height: 50vh;
             }
+
         }
     }
 }
