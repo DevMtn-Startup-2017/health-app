@@ -1,4 +1,4 @@
-const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial'])
+const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
     .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
@@ -92,7 +92,6 @@ app.directive('swipeCard', function() {
 })
 app.service("swipeSrvc", ["$window", function($window) {
     this.changeView = function() {
-        console.log('in swipeSrvc')
         $window.location = "#!/workouts"
     }
 
@@ -130,9 +129,9 @@ app.service("swipeSrvc", ["$window", function($window) {
         },
         {
             exercise: "Run",
-            base_intensity: 5,
+            base_intensity: 20,
             intensity: function() {
-                return this.base_intensity + " reps"
+                return this.base_intensity + " minutes"
             },
             description: 'Move at a speed faster than a walk, never having both or all the feet on the ground at the same time.'
         },
@@ -170,8 +169,6 @@ app.service("swipeSrvc", ["$window", function($window) {
     }
 
     this.changeTime = function(intensity, val) {
-        console.log(intensity);
-        console.log(val)
         return intensity += val;
     }
 }])
