@@ -66,7 +66,7 @@ passport.use(new Auth0Strategy(config.dev.auth0Strategy, function(accessToken, r
 
 // login endpoint
 app.get('/api/login', passport.authenticate('auth0'), function(req,res) {
-  res.redirect('/#!/workouts')
+  res.redirect('/#!/home')
 })
 
 app.get('/api/signup', passport.authenticate('auth0'), function(req,res) {
@@ -75,7 +75,7 @@ app.get('/api/signup', passport.authenticate('auth0'), function(req,res) {
 
 app.get('/auth/callback',
 passport.authenticate('auth0', {
-  successRedirect: '/#!/workouts',
+  successRedirect: '/#!/home',
   failureRedirect: '/login'
 }))
 

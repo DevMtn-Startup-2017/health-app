@@ -1,4 +1,4 @@
-const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial'])
+const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
     .config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider", function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
 
@@ -13,8 +13,6 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial']
             })
 
 
-const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngTouch'])
-    .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
                 url: '/home',
@@ -199,25 +197,51 @@ app.service("swipeSrvc", ["$window", function($window) {
     }
 }])
 app.controller('signupCtrl', ["$scope", "signupSrvc", function($scope, signupSrvc) {
+
+    $scope.value = 3
+    $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value)
+
     $scope.getFitLevel = function() {
         $scope.fitLevel = signupSrvc.getFitnessLevel($scope.value);
+        console.log($scope.fitLevel)
     }
+
+    $scope.heightValues = signupSrvc.heightValues()
+
+    $scope.weightValues = signupSrvc.weightValues()
 
 }])
 app.service('signupSrvc', function() {
     this.getFitnessLevel = function(val) {
-        if (val === 1) {
-            return "Fitness Beginner"
-        } else if (val === 2) {
-            return "Fitness Novice"
-        } else if (val === 3) {
-            return "Fitness Intermediate"
-        } else if (val == 4) {
-            return "Fitness Pro"
-        } else {
-            return "Fitness Master"
+
+        var levels = {
+            1: "Beginner",
+            2: "Novice",
+            3: "Intermediate",
+            4: "Pro",
+            5: "Master",
         }
+        return levels[val] || levels[3]
+
     }
+
+
+    this.heightValues = function() {
+        let vals = []
+        for (var i = 100; i < 500; i+= 5) {
+            vals.push(i)
+        }
+        return vals
+    }
+
+    this.weightValues = function() {
+        let vals = []
+        for (var i = 48; i < (12*8); i+= 1) {
+            vals.push(i)
+        }
+        return vals
+    }
+
 })
 app.controller('streaksCtrl', ["$scope", "streaksSrvc", function ($scope, streaksSrvc) {
 

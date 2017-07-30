@@ -1,34 +1,4 @@
 
-#login {
-  background: linear-gradient(to top right, #252f3c, #4b779a);
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0; }
-  #login h1 {
-    padding: 0;
-    margin: 0;
-    text-align: center; }
-  #login .center {
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    width: 20vw;
-    margin-left: 40vw; }
-  #login form {
-    text-align: center; }
-  #login ul {
-    padding: 0;
-    margin: 0; }
-  #login li {
-    list-style: none; }
-  #login input {
-    text-align: center; }
-  #login #facebook,
-  #login #google {
-    width: 15%;
-    height: 10%; }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,32 +46,6 @@ table {
 
 button:focus {
   outline: none; }
-
-#signUp {
-  background: linear-gradient(to top right, #252f3c, #4b779a);
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0; }
-  #signUp h1 {
-    padding: 0;
-    margin: 0;
-    text-align: center; }
-  #signUp .center {
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    width: 20vw;
-    margin-left: 40vw; }
-  #signUp form {
-    text-align: center; }
-  #signUp ul {
-    padding: 0;
-    margin: 0; }
-  #signUp li {
-    list-style: none; }
-  #signUp input {
-    text-align: center; }
 
 #home-bg {
   background-color: #252f3c;
@@ -188,30 +132,42 @@ button:focus {
     color: white; }
     #login button:focus {
       outline: none; }
-  #login h1 {
+
+#signUp {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+  #signUp h1 {
     padding: 0;
-    margin: 0;
+    margin-bottom: 50px;
     text-align: center;
     color: black; }
-  #login .center {
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    width: 20vw;
-    margin-left: 40vw; }
-  #login form {
+  #signUp .center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw; }
+  #signUp form {
     text-align: center; }
-  #login ul {
+  #signUp ul {
     padding: 0;
     margin: 0; }
-  #login li {
+  #signUp li {
     list-style: none; }
-  #login input {
+  #signUp input {
     text-align: center; }
-  #login #facebook,
-  #login #google {
+  #signUp #facebook,
+  #signUp #google {
     width: 15%;
     height: 10%; }
+  #signUp md-content {
+    flex-basis: 10; }
 
 #streak {
   background: linear-gradient(to top right, #252f3c, #4b779a);
