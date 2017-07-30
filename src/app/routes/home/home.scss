@@ -1,6 +1,6 @@
 #home-bg {
     background-color: #252f3c;
-    background: linear-gradient(to top right, #252f3c, #4b779a);
+    background: linear-gradient(to top right, white, rgb(230,230,230));
     height: 100vh;
     width: 100vw;
     .hamburger {
@@ -11,14 +11,25 @@
             cursor: pointer;
         }
     }
-    .heading {
-        color: orange;
-        font-family: 'Bowlby One SC', cursive;
-        font-size: 2.3em;
-        letter-spacing: 6px;
-        text-shadow: 4px 4px rgba(255,0,0, .2);
-        padding-left: 10vw;
-        padding-top: 3vh;
+    .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        height: 70px;    
+    }
+    #ham-menu {
+        width: 32px;
+        opacity: 0.75;
+    }
+    .logo {
+        font-size: 42px;
+        font-family: "Yantramanav";
+        text-shadow: 0 0 25px rgba(125,125,125,0.5);
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
     }
     .streak {
         border-radius: 50%;
@@ -37,6 +48,7 @@
         }
     }
     #swipe-card-directive {
+        position: relative;
         .card {
             width: 25vw;
             height: 80vh;
@@ -44,7 +56,7 @@
             left: 50%;
             top: 10%;
             transform: translateX(-50%);
-            background-color: white;
+            background: linear-gradient(to top right, rgba(251, 150, 0, 0.75), #ef6c02);
         }
         h1 {
             text-align: center;
@@ -63,9 +75,7 @@
             width: auto;
             border-radius: 15px;
             color: white;
-            background-color: rgba(15, 87, 240, .19);
-            border: 1px solid #2d3f52 white;//
-            box-shadow: 5px 8px rgba(46, 63, 82, .5);
+            box-shadow: 2px 2px 20px rgba(230,230,230, 0.75), -2px -2px 20px rgba(100,100,100,0.75);
         }
 
         @media only screen and (max-width: 700px) {

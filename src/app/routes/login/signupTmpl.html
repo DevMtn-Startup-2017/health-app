@@ -2,12 +2,12 @@
 
     <div class='center'>
         
-        <h1>Help us tailor your workout experience</h1>
+        <h1 md-colors="{color: 'primary-900'}">Help us tailor your workout experience to you</h1>
 
-        <md-content md-theme="default" layout-gt-sm="row" layout-padding>
+        <md-content md-theme="default" layout-gt-m="row" layout-padding>
             <div>
 
-                <md-input-container class="md-block" flex-gt-sm>
+                <md-input-container class="md-block" flex-gt-m>
                     <label>Height (in)</label>
                     <md-select ng-model="user.height">
                     <md-option ng-repeat="height in heightValues" value="{{user.height || height}}">
@@ -16,7 +16,7 @@
                     </md-select>
                 </md-input-container>
 
-                <md-input-container class="md-block" flex-gt-sm>
+                <md-input-container class="md-block" flex-gt-m>
                     <label>Weight (lbs)</label>
                     <md-select ng-model="user.weight">
                     <md-option ng-repeat="weight in weightValues" value="{{user.weight || weight}}">
@@ -30,12 +30,20 @@
                     </md-slider>
                 </md-slider-container>
 
-                {{fitLevel}}
+                <p class='fit-level'>{{fitLevel}}</p>
 
             </div>
 
+
+
         </md-content>
 
+        <div class='buttons-container'>
+
+            <md-button ui-sref="home" class='md-raised md-primary' type="button">Submit</md-button>     
+            <md-button ui-sref="home" class='md-raised md-primary' type="button">Skip</md-button>   
+
+        </div>
 
     </div>
 </section>

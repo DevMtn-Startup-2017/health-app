@@ -12,8 +12,7 @@ app.service('signupSrvc', function() {
 
     }
 
-
-    this.heightValues = function() {
+    this.weightValues = function() {
         let vals = []
         for (var i = 100; i < 500; i+= 5) {
             vals.push(i)
@@ -21,9 +20,9 @@ app.service('signupSrvc', function() {
         return vals
     }
 
-    this.weightValues = function() {
+    this.heightValues = function() {
         let vals = []
-        for (var i = 48; i < (12*8); i+= 1) {
+        for (var i = 52; i < (12*8); i+= 1) {
             vals.push(i)
         }
         return vals

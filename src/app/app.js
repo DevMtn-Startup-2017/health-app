@@ -4,7 +4,7 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial',
 
         $mdThemingProvider.theme('default')
             .primaryPalette('green')
-            .accentPalette('deep-orange')
+            .accentPalette('orange')
 
         $mdThemingProvider.enableBrowserColor({
             theme: 'default', // Default is 'default'
