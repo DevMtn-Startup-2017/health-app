@@ -1,4 +1,4 @@
-app.controller('mainCtrl', function($scope, $mdTheming, streaksSrvc, swipeSrvc) {
+app.controller('mainCtrl', function($scope, $mdTheming, $interval, streaksSrvc, swipeSrvc) {
     $scope.card = []
     // gtfo bro
     $scope.streak = streaksSrvc.getStreak();
@@ -29,4 +29,42 @@ app.controller('mainCtrl', function($scope, $mdTheming, streaksSrvc, swipeSrvc) 
     $scope.$on('$destroy', function () {
       removeFunction() 
     })
+
+
+
+
+    $scope.countDownTimer = function(initialCount) {
+
+        console.log('timer started', initialCount)
+
+        var countDownDate = new Date().getTime() 
+
+        countDownDate += (initialCount * 1000 * 60)
+
+        var x = $interval(function() {
+
+         // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) || 0;
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            $scope.currentTime = hours + ":"
+            + minutes + ":" + seconds
+
+            console.log($scope.currentTime)
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                cancel(x);
+            }
+            }, 333)
+
+    }
 })
