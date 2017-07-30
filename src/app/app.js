@@ -17,7 +17,8 @@ const app = angular.module('healthApp', ['ui.router', 'ngAnimate', 'ngMaterial']
             })
             .state('workouts', {
                 url: '/workouts',
-                templateUrl: './app/routes/workouts/workoutsTmpl.html'
+                templateUrl: './app/routes/workouts/workoutsTmpl.html',
+                // controller: 'workoutsCtrl'
             })
             .state('streaks', {
                 url: '/streaks',

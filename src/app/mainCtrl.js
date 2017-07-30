@@ -7,4 +7,8 @@ app.controller('mainCtrl', function($scope, streaksSrvc, swipeSrvc) {
         $scope.card.workout = swipeSrvc.getWorkout();
     }
     $scope.card.getWorkout();
+
+    $scope.changeTime = function(val) {
+        $scope.card.workout.base_intensity = swipeSrvc.changeTime($scope.card.workout.base_intensity, val)
+    }
 })
