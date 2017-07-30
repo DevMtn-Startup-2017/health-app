@@ -1,6 +1,6 @@
 #home-bg {
-    background-color: #252f3c;
-    background: linear-gradient(to top right, #252f3c, #264350);
+    background-color: #FFF;
+    //background: linear-gradient(to top right, #252, #FFF, #264350);
     height: 100vh;
     width: 100vw;
     .hamburger {
@@ -12,12 +12,14 @@
         }
     }
     .streak {
-        border-radius: 50%;
-        border: .3vw solid white;
-        color: white;
-        font-size: 3em;
+        background: linear-gradient(#fefcea 0%,#f1da3f 100%);
+        border-radius: 30%;
+        border: 1px solid rgba(0, 0, 0, .25);
+        box-shadow: 0 0 5px gray;
+        color: black;
+        font-size: 4em;
         width: 5vw;
-        line-height: 5vw;
+        line-height: 4.6vw;
         height: 5vw;
         text-align: center;
         position: absolute;
@@ -29,6 +31,8 @@
     }
     #swipe-card-directive {
         .card {
+            font-family: 'montserrat', sans-sarif;
+            // font-weight: 900;
             width: 25vw;
             height: 80vh;
             position: absolute;
