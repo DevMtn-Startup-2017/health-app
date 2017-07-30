@@ -236,8 +236,8 @@ button:focus {
     margin-top: 12vh; }
   #streak #streak-count {
     border-radius: 50%;
-    border: 5px solid white;
-    color: white;
+    border: 5px solid black;
+    color: black;
     position: absolute;
     margin-left: 10vw;
     margin-top: 30vh;
