@@ -1,0 +1,55 @@
+#streak {
+	background: linear-gradient(to top right, #252f3c, #264350);
+	height: 100vh;
+	width: 100vw;
+	padding-top: 10vh;
+	// margin: 0 auto;
+
+	.back-home {
+		position: absolute;
+		left: 3vw;
+		top: 4vh;
+		width: auto;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	img {
+		width: 50vw;
+		height: auto;
+		float: left;
+		margin-left: 8vw;
+		display: inline-element;
+	}
+
+
+	.streaks-label {
+		color: white;
+		font-size: 4em;
+		display: inline-block;
+		float: right;
+		margin-right: 6vw;
+		margin-top: 12vh;
+	}
+
+	#streak-count {
+		border-radius: 50%;
+		border: 5px solid white;
+		color: white;
+		position: absolute;
+		margin-left: 10vw;
+		margin-top: 30vh;
+		width: 40vh;
+		line-height: 40vh;
+		height: auto;
+		text-align: center;
+		display: inline-block;
+		
+
+		h1 {
+			font-size: 10em;
+		}
+	}	
+}
