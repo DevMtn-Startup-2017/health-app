@@ -114,6 +114,14 @@ button:focus {
     top: 4vh; }
     #home-bg .hamburger:hover {
       cursor: pointer; }
+  #home-bg .heading {
+    color: orange;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 2.3em;
+    letter-spacing: 6px;
+    text-shadow: 4px 4px rgba(255, 0, 0, 0.2);
+    padding-left: 10vw;
+    padding-top: 3vh; }
   #home-bg .streak {
     border-radius: 50%;
     border: .3vw solid white;
@@ -138,16 +146,16 @@ button:focus {
     background-color: white; }
   #home-bg #swipe-card-directive h1 {
     text-align: center;
-    font-size: 4em; }
+    font-size: 7em; }
   #home-bg #swipe-card-directive h2 {
     text-align: center;
-    font-size: 2em; }
+    font-size: 3em; }
   #home-bg #swipe-card-directive .card {
     font-size: 1vw;
     padding: 2vh 5vw;
     margin-top: 10vh;
     padding-top: 12vh;
-    height: 50vh;
+    height: 60vh;
     width: auto;
     border-radius: 15px;
     color: white;
@@ -156,10 +164,10 @@ button:focus {
     box-shadow: 5px 8px rgba(46, 63, 82, 0.5); }
   @media only screen and (max-width: 700px) {
     #home-bg #swipe-card-directive .card {
-      margin-top: 18vh;
+      margin-top: 2vh;
       font-size: 1vh;
-      width: 80%;
-      height: 50vh; } }
+      width: 90%;
+      height: 77vh; } }
 
 #streak {
   background: linear-gradient(to top right, #252f3c, #4b779a);
@@ -248,16 +256,26 @@ button:focus {
 #swipe-section {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(black, #111111);
+  background: linear-gradient(to top right, #ff9323, #aa1323);
   color: rgba(255, 255, 255, 0.7);
   text-align: center; }
   @media only screen and (max-width: 650px) {
+    #swipe-section .back-home {
+      float: left;
+      position: absolute;
+      margin-left: 3vw;
+      margin-top: 3vh; }
     #swipe-section #goButton {
       margin-top: 10%;
       margin-bottom: 5%;
+      background-color: rgba(0, 0, 50, 0.8);
       text-align: center;
       font-size: 4em;
-      border-radius: 50%; }
+      border: none;
+      padding: 5px;
+      border-radius: 50%;
+      color: white;
+      box-shadow: 4px 4px rgba(0, 0, 0, 0.3); }
     #swipe-section #ready {
       font-size: 4em;
       text-align: center;
