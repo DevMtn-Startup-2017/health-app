@@ -11,6 +11,15 @@
             cursor: pointer;
         }
     }
+    .heading {
+        color: orange;
+        font-family: 'Bowlby One SC', cursive;
+        font-size: 2.3em;
+        letter-spacing: 6px;
+        text-shadow: 4px 4px rgba(255,0,0, .2);
+        padding-left: 10vw;
+        padding-top: 3vh;
+    }
     .streak {
         border-radius: 50%;
         border: .3vw solid white;
@@ -39,18 +48,18 @@
         }
         h1 {
             text-align: center;
-            font-size: 4em;
+            font-size: 7em;
         }
         h2 {
             text-align: center;
-            font-size: 2em;
+            font-size: 3em;
         }
         .card {
             font-size:1vw;
             padding: 2vh 5vw;
             margin-top: 10vh;
             padding-top: 12vh;
-            height: 50vh;
+            height: 60vh;
             width: auto;
             border-radius: 15px;
             color: white;
@@ -61,10 +70,10 @@
 
         @media only screen and (max-width: 700px) {
             .card {
-                margin-top: 18vh;
+                margin-top: 2vh;
                 font-size: 1vh;
-                width: 80%;
-                height: 50vh;
+                width: 90%;
+                height: 77vh;
             }
 
         }
